@@ -1,4 +1,5 @@
 import createMathOperation from './.internal/createMathOperation.js'
+//const cm = require("./.internal/createMathOperation.js");
 
 /**
  * Adds two numbers.
@@ -16,3 +17,4 @@ import createMathOperation from './.internal/createMathOperation.js'
 const add = createMathOperation((augend, addend) => augend + addend, 0)
 
 export default add
+//module.exports = add;
