@@ -1,11 +1,19 @@
 language: node_js
-node_js: "stable"
+node_js: 
+    - 11.6.0
 
-dist: bionic
+cache: npm
 
-before_install:
-   - stty cols 80
+install: 
+    - npm install
 
-addons:
-   firefox: latest
-   chrome: stable
+script: 
+    - npm test
+    - npm run build
+
+deploy: 
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    on:
+        branch: main
