@@ -2,14 +2,14 @@ language: node_js
 node_js: 
     - 11.6.0
 
-cache: npm
+cache: yarn
 
 install: 
-    - npm install
+    - yarn install
 
 script: 
-    - npm test
-    - npm run build
+    - yarn test
+    - yarn run build
 
 
 deploy: 
@@ -18,4 +18,4 @@ deploy:
     github-token: $GITHUB_TOKEN
     local_dir: build
     on:
-        branch: master
+        branch: main
